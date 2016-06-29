@@ -1,0 +1,113 @@
+@import "./importer/importer.scss";
+html{
+  width: 100%;
+  height: 100%;
+}
+body {
+    // background-color: $lightGrey;
+    background: url("../../images/hero6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 !important;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+
+    header {
+        width: 100%;
+        background: rgba(#000, .85);
+        height: 25%;
+        z-index: 100;
+        // position: fixed;
+
+        ol {
+            display: block;
+            margin: 0;
+            list-style: none;
+            width: 100%;
+            height: 65%;
+            padding: 10px 0;
+            padding-right: 10%;
+
+            li {
+                display: block;
+                width: 40%;
+                height: 35%;
+                float: right;
+                margin-top: 1em;
+                clear: right;
+                text-align: center;
+            }
+            .headerLis{
+              padding: 10px;
+              color: white;
+
+              span{
+                padding-right: 10px;
+                margin-bottom: 10px;
+              }
+
+              input{
+                border: 1px solid white;
+                padding-left: 5px;
+                background: rgba(white, .2);
+                width: 50%;
+              }
+            }
+
+            #logo {
+                width: auto;
+                height: 95%;
+                float: left;
+                margin: 0;
+                display: block;
+                background: none;
+                padding-left: 10%;
+
+                #ncaa-logo {
+                    width: 15vw;
+                    height: 100%;
+                    background-image: url("../../images/logo.png");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    color: white;
+                    display: block;
+                }
+            }
+        }
+        nav {
+            display: block;
+            width: 100%;
+            height: 35.1%;
+            text-align: right;
+            border: none !important;
+            line-height: 500%;
+            padding-right: 12.5%;
+
+            a {
+              // background: rgba(#3e3e3e, .8);
+              // border: 1.5px solid darkgrey;
+              font-size: 1.5em;
+              padding: 1vw 2.5vw;
+              color: rgb(220, 220, 220);
+              transition: 100ms all linear;
+
+              &:hover{
+                text-decoration: none;
+                // -webkit-box-shadow: inset 0px 0px 5px 1px rgba(31,31,31,1);
+                // -moz-box-shadow: inset 0px 0px 5px 1px rgba(31,31,31,1);
+                // box-shadow: inset 0px 0px 5px 1px rgba(31,31,31,1);
+                color: white;
+              }
+            }
+        }
+    }
+    h1 {
+        color: $logoBlue;
+    }
+    // @import "./partials/spacer.scss";
+    @import "./partials/defaultContent.scss";
+}

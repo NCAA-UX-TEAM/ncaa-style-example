@@ -1,0 +1,12 @@
+.defaultContent{
+  background-color: rgba($lightGrey, .95);
+  height: 75%;
+  border: 2.5px solid $logoBlue;
+  border-top: 0;
+  border-bottom: 0;
+  overflow-y: auto;
+  -webkit-box-shadow: 0px 7.5px 10px 2.5px rgba(31,31,31,1);
+  -moz-box-shadow: 0px 7.5px 10px 2.5px rgba(31,31,31,1);
+  box-shadow: 0px 7.5px 10px 2.5px rgba(31,31,31,1);
+  color: white;
+}
