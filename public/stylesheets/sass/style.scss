@@ -22,17 +22,19 @@ body {
         -webkit-box-shadow: 0px 1px 3px 2.5px rgba(82,82,82,0.65);
         -moz-box-shadow: 0px 1px 3px 2.5px rgba(82,82,82,0.65);
         box-shadow: 0px 1px 3px 2.5px rgba(82,82,82,0.65);
-        z-index: 99999;
-        position: fixed;
+        z-index: 99;
+        position: absolute;
+
+
 
         ol {
             display: block;
-            margin: 0;
+            margin: 0 !important;
             list-style: none;
             width: 100%;
             height: 75%;
             padding: 10px 0;
-            padding-right: 10%;
+            padding-right: 5%;
 
             li {
                 display: block;
@@ -43,24 +45,42 @@ body {
                 clear: right;
                 text-align: center;
             }
+            #app-name{
+              font-size: 2em;
+              margin: 0;
+              width: 60%;
+              text-align: right;
+              padding: 0;
+            }
             .headerLis{
               padding: 10px;
               color: white;
 
-              span{
-                padding-right: 10px;
+            }
+            #user-portal{
+
+              .userBtns{
+                padding: 0;
+                border: none;
+                background: transparent;
                 margin-bottom: 10px;
               }
-
               input{
                 border: 1px solid white;
-                padding-left: 5px;
                 background: rgba(white, .2);
-                width: 50%;
                 border-radius: 1.5px;
               }
-            }
 
+              input:last-child{
+                padding-left: 7.5px;
+                padding-right: 0;
+                background: rgba(white, .35);
+
+                &:focus{
+                  background: rgba(white, .5);
+                }
+              }
+            }
             #logo {
                 width: auto;
                 height: 95%;
@@ -82,30 +102,50 @@ body {
                 }
             }
         }
+        .active>a{
+          background-color: rgba($logoBlue, .5) !important;
+
+          &:hover{
+            background-color: rgba($logoBlue, .65) !important;
+
+          }
+        }
         nav {
-            display: block;
-            width: 100%;
-            height: auto !important;
-            text-align: right;
-            padding: .65% 0;
-            padding-right: 12.5%;
-            margin-bottom: 0 !important;
+          padding: 0 5%;
+          background: black !important;
+          border: none !important;
+          border-radius: 0 !important;
+
 
             a {
-              // background: rgba(#3e3e3e, .8);
-              // border: 1.5px solid darkgrey;
-              font-size: 1.5em;
               padding: 1vw 2.5vw;
-              color: rgb(220, 220, 220);
-              transition: 100ms all linear;
+              @include cstmAllHover(100ms);
+              color: white !important;
 
               &:hover{
                 text-decoration: none;
-                // -webkit-box-shadow: inset 0px 0px 5px 1px rgba(31,31,31,1);
-                // -moz-box-shadow: inset 0px 0px 5px 1px rgba(31,31,31,1);
-                // box-shadow: inset 0px 0px 5px 1px rgba(31,31,31,1);
-                color: white;
+                color: rgba($logoBlue, .85) !important;
               }
+              &:active{
+                color: rgba($logoBlue, .99) !important;
+              }
+            }
+            .dropdown{
+              color: transparent !important;
+              li{
+                a{
+                  color: grey !important;
+                }
+              }
+            }
+            .open{
+              background: transparent !important;
+              a{
+                background: transparent !important;
+              }
+            }
+            .open>a:focus, .open>a:hover, .open>a:default{
+              background: rgba($logoBlue, 0) !important;
             }
         }
     }

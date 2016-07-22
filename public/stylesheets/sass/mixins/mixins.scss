@@ -1,0 +1,30 @@
+@mixin nomTextHover(){
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -ms-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+@mixin nomAllHover(){
+  -webkit-transition: all 250ms linear;
+  -moz-transition: all 250ms linear;
+  -ms-transition: all 250ms linear;
+  -o-transition: all 250ms linear;
+  transition: all 250ms linear;
+}
+@mixin cstmAllHover($time){
+  -webkit-transition: all $time linear;
+  -moz-transition: all $time linear;
+  -ms-transition: all $time linear;
+  -o-transition: all $time linear;
+  transition: all $time linear;
+}
+
+
+@mixin colHovTransition($time){
+  -webkit-transition: all $time linear;
+  -moz-transition: all $time linear;
+  -ms-transition: all $time linear;
+  -o-transition: all $time linear;
+  transition: all $time linear;
+}

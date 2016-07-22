@@ -29,16 +29,16 @@ body {
     -webkit-box-shadow: 0px 1px 3px 2.5px rgba(82, 82, 82, 0.65);
     -moz-box-shadow: 0px 1px 3px 2.5px rgba(82, 82, 82, 0.65);
     box-shadow: 0px 1px 3px 2.5px rgba(82, 82, 82, 0.65);
-    z-index: 99999;
-    position: fixed; }
+    z-index: 99;
+    position: absolute; }
     body header ol {
       display: block;
-      margin: 0;
+      margin: 0 !important;
       list-style: none;
       width: 100%;
       height: 75%;
       padding: 10px 0;
-      padding-right: 10%; }
+      padding-right: 5%; }
       body header ol li {
         display: block;
         width: 40%;
@@ -47,18 +47,30 @@ body {
         margin-top: 1em;
         clear: right;
         text-align: center; }
+      body header ol #app-name {
+        font-size: 2em;
+        margin: 0;
+        width: 60%;
+        text-align: right;
+        padding: 0; }
       body header ol .headerLis {
         padding: 10px;
         color: white; }
-        body header ol .headerLis span {
-          padding-right: 10px;
-          margin-bottom: 10px; }
-        body header ol .headerLis input {
-          border: 1px solid white;
-          padding-left: 5px;
-          background: rgba(255, 255, 255, 0.2);
-          width: 50%;
-          border-radius: 1.5px; }
+      body header ol #user-portal .userBtns {
+        padding: 0;
+        border: none;
+        background: transparent;
+        margin-bottom: 10px; }
+      body header ol #user-portal input {
+        border: 1px solid white;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 1.5px; }
+      body header ol #user-portal input:last-child {
+        padding-left: 7.5px;
+        padding-right: 0;
+        background: rgba(255, 255, 255, 0.35); }
+        body header ol #user-portal input:last-child:focus {
+          background: rgba(255, 255, 255, 0.5); }
       body header ol #logo {
         width: auto;
         height: 95%;
@@ -76,53 +88,86 @@ body {
           background-size: contain;
           color: white;
           display: block; }
+    body header .active > a {
+      background-color: rgba(0, 125, 193, 0.5) !important; }
+      body header .active > a:hover {
+        background-color: rgba(0, 125, 193, 0.65) !important; }
     body header nav {
-      display: block;
-      width: 100%;
-      height: auto !important;
-      text-align: right;
-      padding: .65% 0;
-      padding-right: 12.5%;
-      margin-bottom: 0 !important; }
+      padding: 0 5%;
+      background: black !important;
+      border: none !important;
+      border-radius: 0 !important; }
       body header nav a {
-        font-size: 1.5em;
         padding: 1vw 2.5vw;
-        color: gainsboro;
-        transition: 100ms all linear; }
+        -webkit-transition: all 100ms linear;
+        -moz-transition: all 100ms linear;
+        -ms-transition: all 100ms linear;
+        -o-transition: all 100ms linear;
+        transition: all 100ms linear;
+        color: white !important; }
         body header nav a:hover {
           text-decoration: none;
-          color: white; }
+          color: rgba(0, 125, 193, 0.85) !important; }
+        body header nav a:active {
+          color: rgba(0, 125, 193, 0.99) !important; }
+      body header nav .dropdown {
+        color: transparent !important; }
+        body header nav .dropdown li a {
+          color: grey !important; }
+      body header nav .open {
+        background: transparent !important; }
+        body header nav .open a {
+          background: transparent !important; }
+      body header nav .open > a:focus, body header nav .open > a:hover, body header nav .open > a:default {
+        background: rgba(0, 125, 193, 0) !important; }
   body h1 {
     color: #007dc1; }
   body .spacer {
-    height: 25%;
+    height: 25.25%;
     width: 100%;
     display: block; }
   body .defaultContent {
     background-color: rgba(245, 245, 245, 0.85);
-    height: 100%;
-    border: 2.5px solid rgba(0, 125, 193, 0.2);
+    height: 74.25%;
     border-top: 0;
     border-bottom: 0;
     overflow-y: auto;
     -webkit-box-shadow: 0px 7.5px 10px 2.5px rgba(31, 31, 31, 0.3);
     -moz-box-shadow: 0px 7.5px 10px 2.5px rgba(31, 31, 31, 0.3);
     box-shadow: 0px 7.5px 10px 2.5px rgba(31, 31, 31, 0.3);
-    color: #838383; }
+    color: #838383;
+    position: absolute;
+    top: 25.5%;
+    padding-top: 2.5%; }
+    body .defaultContent .modalContainer {
+      height: 50%; }
+      body .defaultContent .modalContainer .modal {
+        padding: 0 !important; }
     body .defaultContent .cardContainer {
       box-sizing: border-box; }
     body .defaultContent .tblContainer {
-      min-height: 50%; }
+      min-height: 50%;
+      text-align: center; }
+      body .defaultContent .tblContainer th {
+        text-align: center; }
+    body .defaultContent #animation-container {
+      min-height: 50%;
+      padding: 0 20px; }
+      body .defaultContent #animation-container .gear {
+        background: url("../../../images/logo.png") center no-repeat;
+        background-size: 100%;
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        margin: 0 -10px;
+        float: right; }
     body .defaultContent .cards {
       background-color: whitesmoke;
       overflow-y: auto;
       text-align: center;
       padding: 2%; }
       body .defaultContent .cards:nth-child(odd) {
-        background-color: rgba(229, 229, 229, 0.5);
-        -webkit-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-        box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+        background-color: rgba(229, 229, 229, 0.5); }
       body .defaultContent .cards h3 {
         margin-top: 0; }
       body .defaultContent .cards p {
