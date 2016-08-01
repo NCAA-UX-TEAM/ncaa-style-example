@@ -7,5 +7,9 @@ $(function(){
     var modal = $(this)
     modal.find('.modal-title').text('New message to ' + recipient)
     modal.find('.modal-body input').val(recipient)
-  })
+  });
+  //tooltip function
+  $('[data-toggle="tooltip"]').tooltip();
+  //popover function
+  $('[data-toggle="popover"]').popover();
 });

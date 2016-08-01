@@ -22,6 +22,48 @@ body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
   font-weight: 100; }
+  body #spinner.active {
+    display: block; }
+  body #spinner {
+    display: none;
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 40%;
+    left: 48%;
+    z-index: 1; }
+  body .spinner_ball {
+    position: absolute;
+    display: block;
+    background-color: #007dc1;
+    left: 24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px; }
+  body #ball_1 {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9);
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 6px 30px; }
+  body #ball_2 {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0.5, 0.9, 0.9);
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 6px 30px; }
+  body #ball_3 {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0.7, 0.9, 0.9);
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 6px 30px; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1); }
+  100% {
+    -webkit-transform: rotate(1440deg) scale(1); } }
   body header {
     width: 100%;
     background: black;
@@ -122,6 +164,8 @@ body {
         background: rgba(0, 125, 193, 0) !important; }
   body h1 {
     color: #007dc1; }
+  body .centered {
+    text-align: center; }
   body .spacer {
     height: 25.25%;
     width: 100%;

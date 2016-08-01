@@ -2,24 +2,27 @@
 <html>
   <head>
     <title>{{title}}</title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script type="text/javascript" src="javascripts/preloader.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel='stylesheet' href='/stylesheets/css/style.css' />
   </head>
   <body class="container-fluid">
+    <div id="preloader" style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background: #000; z-index: 100;">
+      <div id="spinner" class="active">
+         <span id="ball_1" class="spinner_ball"></span>
+         <span id="ball_2" class="spinner_ball"></span>
+         <span id="ball_3" class="spinner_ball"></span>
+      </div>
+    </div>
     <header class="header">
       <ol class="row">
         <li id="logo" class="col-lg-3">
           <a href="#" id="ncaa-logo"></a>
         </li>
         <li class="headerLis" id="app-name">NCAA Styleguide</li>
-        <li class="headerLis row" id="user-portal">
-          <input type="button" name="name" value="Login" class="col-lg-2 col-xs-6 userBtns">
-          <input type="button" name="name" value="Sign Up" class="col-lg-2 col-xs-6 userBtns">
-          <span class="col-lg-1 hidden-md hidden-sm hidden-xs"></span>
-          <input type="search" name="name" placeholder="Search" class="col-lg-7 col-xs-12">
-        </li>
       </ol>
       <nav class="navbar navbar-default">
         <div class="container-fluid">

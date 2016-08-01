@@ -14,7 +14,7 @@ body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
     font-weight: 100;
-
+    @import "./partials/spinner.scss";
     header {
         width: 100%;
         background: rgba(#000, 97.5);
@@ -150,7 +150,10 @@ body {
         }
     }
     h1 {
-        color: $logoBlue;
+      color: $logoBlue;
+    }
+    .centered{
+      text-align: center;
     }
     @import "./partials/spacer.scss";
     @import "./partials/defaultContent.scss";

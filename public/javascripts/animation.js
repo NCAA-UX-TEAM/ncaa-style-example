@@ -1,3 +1,4 @@
+var ldr = false;
 $(function(){
 
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -92,4 +93,44 @@ $(function(){
   //end of nice gear's loop. ):
   //==================================
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //==================================
+  //!!!!!!!!!!!GREENSOCK.JS!!!!!!!!!!!
+  //==================================
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //==================================
+  //SOME BASIC ANIMATION!
+  //==================================
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  var move1 = document.getElementById('move1');
+
+  TweenLite.to(move1, 10, {marginLeft: 300});
+
+
+  //notice TweenMax knew move2 already without any declaration of its existence
+  //not best practice, but is possible
+  //anti-pattern: don't do this
+  TweenMax.to(move2, 5, {marginLeft:"300px",
+                       repeat:-1, yoyo:true});
+
+  function Animation(name, callback){
+      this.name = name;
+      this.callback = callback;
+      this.test = function(element){
+        this.element = element;
+        TweenMax.to(this.element, 10,{color: 'red', rotation: "360deg", transformOrigin: "center", opacity: 0.25, repeat: 4, yoyo: false});
+      };
+  }
+  var newAni = new Animation('new', false);
+  var move3 = document.getElementById('move3');
+  newAni.test(move3);
+
+  // $('#preloader').css({display: "none"});
+  console.log('loaded');
+  ldr = true;
 });
